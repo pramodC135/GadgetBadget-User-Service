@@ -35,7 +35,7 @@ $(document).on("click", "#btnSave", function(event)
 				 dataType : "text", 
 				 complete : function(response, status) 
 				 { 
-				 		onItemSaveComplete(response.responseText, status); 
+				 		onUserSaveComplete(response.responseText, status); 
 				 } 
 		 }); 
 });
@@ -51,7 +51,7 @@ $(document).on("click", ".btnRemove", function(event)
 			 dataType : "text", 
 			 complete : function(response, status) 
 			 { 
-			 		onItemDeleteComplete(response.responseText, status); 
+			 		onUserDeleteComplete(response.responseText, status); 
 			 } 
 	 }); 
 });
