@@ -44,14 +44,14 @@ public class UsersAPI extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		String output = userObj.insertUser(request.getParameter("userCode"),
-				request.getParameter("itemName"),
-				request.getParameter("itemPrice"),
-				request.getParameter("itemDesc"),
-				request.getParameter("itemPrice"),
-				request.getParameter("itemPrice"),
-				request.getParameter("itemPrice"),
-				request.getParameter("itemPrice"),
-				request.getParameter("itemPrice"));
+				request.getParameter("username"),
+				request.getParameter("userPwd"),
+				request.getParameter("userEmail"),
+				request.getParameter("userRole"),
+				request.getParameter("userFname"),
+				request.getParameter("userLname"),
+				request.getParameter("userAddress"),
+				request.getParameter("userBod"));
 		response.getWriter().write(output);
 	}
 
@@ -63,8 +63,8 @@ public class UsersAPI extends HttpServlet {
 		Map paras = getParasMap(request); 
 		
 		String output = userObj.updateUser(paras.get("hidUserIDSave").toString(), 
-							paras.get("itemCode").toString(), 
-							paras.get("itemName").toString(), 
+							paras.get("userCode").toString(), 
+							paras.get("username").toString(), 
 							paras.get("itemPrice").toString(), 
 							paras.get("itemDesc").toString(),
 							paras.get("itemDesc").toString(),

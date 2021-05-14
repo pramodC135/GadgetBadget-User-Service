@@ -19,19 +19,19 @@
 								
 								<h1>Users Management</h1>
 								<form id="formItem" name="formItem" method="post" action="users.jsp">
-									User code: <input name="itemCode" id="itemCode" type="text" class="form-control form-control-sm"><br>
-									User Name: <input name="itemName" id="itemName" type="text" class="form-control form-control-sm"><br>
-									Password: <input name="itemPrice" id="itemPrice" type="text" class="form-control form-control-sm"><br>
-									User Email: <input name="itemDesc" id="itemDesc" type="text" class="form-control form-control-sm"><br>
-									User Role : <input name="itemPrice" id="itemPrice" type="text" class="form-control form-control-sm"><br>
-									First Name : <input name="itemPrice" id="itemPrice" type="text" class="form-control form-control-sm"><br>
-									Last Name : <input name="itemPrice" id="itemPrice" type="text" class="form-control form-control-sm"><br>
-									Address : <input name="itemPrice" id="itemPrice" type="text" class="form-control form-control-sm"><br>
-									Birth Date : <input name="itemPrice" id="itemPrice" type="text" class="form-control form-control-sm"><br>
+									User code: <input name="userCode" id="userCode" type="text" class="form-control form-control-sm"><br>
+									User Name: <input name="username" id="username" type="text" class="form-control form-control-sm"><br>
+									Password: <input name="userPwd" id="userPwd" type="password" class="form-control form-control-sm"><br>
+									User Email: <input name="userEmail" id="userEmail" type="email" class="form-control form-control-sm"><br>
+									User Role : <input name="userRole" id="userRole" type="text" class="form-control form-control-sm"><br>
+									First Name : <input name="userFname" id="userFname" type="text" class="form-control form-control-sm"><br>
+									Last Name : <input name="userLname" id="userLname" type="text" class="form-control form-control-sm"><br>
+									Address : <input name="userAddress" id="userAddress" type="text" class="form-control form-control-sm"><br>
+									Birth Date : <input name="userBod" id="userBod" type="date" class="form-control form-control-sm"><br>
 									<br>
 									<div id="alertSuccess" class="alert alert-success"></div>
 									<div id="alertError" class="alert alert-danger"></div>
-									<input name="btnSave" id="btnSave" type="button" value="Save" class="btn btn-primary">
+									<input name="btnSave" id="btnSave" type="button" value="Save User" class="btn btn-primary">
 									<input type="hidden" id="hidUserIDSave" name="hidUserIDSave" value="">
 								</form>
 								
