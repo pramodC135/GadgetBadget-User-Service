@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=divice-width, initial-scale=1">
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <script src="Components/jquery-3.2.1.min.js"></script>
-<script src="Components/items.js"></script>
+<script src="Components/users.js"></script>
 <title>Users Management</title>
 </head>
 <body>
