@@ -17,7 +17,7 @@ $(document).on("click", "#btnSave", function(event)
 		 $("#alertError").hide(); 
 		 
 		// Form validation-------------------
-		var status = validateItemForm(); 
+		var status = validateUserForm(); 
 		if (status != true) 
 		 { 
 				 $("#alertError").text(status); 
@@ -26,7 +26,7 @@ $(document).on("click", "#btnSave", function(event)
 		 } 
 		 
 		// If valid------------------------
-		var type = ($("#hidItemIDSave").val() == "") ? "POST" : "PUT"; 
+		var type = ($("#hidUserIDSave").val() == "") ? "POST" : "PUT"; 
 		 $.ajax( 
 		 { 
 				 url : "ItemsAPI", 
@@ -59,14 +59,20 @@ $(document).on("click", ".btnRemove", function(event)
 
 $(document).on("click", ".btnUpdate", function(event)
 {
-	$("#hidItemIDSave").val($(this).data("itemid"));
+	$("#hidUserIDSave").val($(this).data("itemid"));
 	$("#itemCode").val($(this).closest("tr").find('td:eq(0)').text());
 	$("#itemName").val($(this).closest("tr").find('td:eq(1)').text());
 	$("#itemPrice").val($(this).closest("tr").find('td:eq(2)').text());
 	$("#itemDesc").val($(this).closest("tr").find('td:eq(3)').text());
+	$("#itemDesc").val($(this).closest("tr").find('td:eq(4)').text());
+	$("#itemDesc").val($(this).closest("tr").find('td:eq(5)').text());
+	$("#itemDesc").val($(this).closest("tr").find('td:eq(6)').text());
+	$("#itemDesc").val($(this).closest("tr").find('td:eq(7)').text());
+	$("#itemDesc").val($(this).closest("tr").find('td:eq(8)').text());
+	$("#itemDesc").val($(this).closest("tr").find('td:eq(9)').text());
 });
 
-function validateItemForm()
+function validateUserForm()
 {	
 	// CODE
 	if ($("#itemCode").val().trim() == "")
@@ -105,7 +111,7 @@ function validateItemForm()
 	return true;
 }
 
-function onItemSaveComplete(response, status)
+function onUserSaveComplete(response, status)
 { 
 		if (status == "success") 
 		{ 
@@ -136,7 +142,7 @@ function onItemSaveComplete(response, status)
 }
  
 
-function onItemDeleteComplete(response, status)
+function onUserDeleteComplete(response, status)
 { 
 		if (status == "success") 
 		{ 
