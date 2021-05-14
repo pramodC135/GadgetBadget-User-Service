@@ -51,11 +51,12 @@ public class User {
 			preparedStmt.execute();
 			con.close();
 			
-			output = "User Inserted Successfully";
+			String newUsers =readUsers();
+			output = "{\"status\":\"success\", \"data\":\"" + newUsers + "\"}";
 		}
 		catch(Exception e)
 		{
-			output = "Error while inserting the item.";
+			output = "{\"status\":\"error\", \"data\": \"Error while inserting the item.\"}";
 			System.err.println(e.getMessage());
 		}
 		
