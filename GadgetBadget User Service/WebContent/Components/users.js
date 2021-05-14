@@ -138,7 +138,7 @@ function onUserSaveComplete(response, status)
 			 	
 			 	if (resultSet.status.trim() == "success") 
 			 	{ 
-			 		$("#alertSuccess").text("Successfully saved."); 
+			 		$("#alertSuccess").text("Successfully Saved."); 
 			 		$("#alertSuccess").show(); 
 			 		
 			 		$("#divUsersGrid").html(resultSet.data); 
