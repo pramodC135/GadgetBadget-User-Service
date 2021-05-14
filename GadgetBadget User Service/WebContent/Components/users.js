@@ -127,16 +127,6 @@ function validateUserForm()
 		return "Insert User Birthday.";
 	}
 	
-	// is numerical value
-	///var tmpPrice = $("#itemPrice").val().trim();
-	//if (!$.isNumeric(tmpPrice))
-	//{
-	//	return "Insert a numerical value for Item Price."
-	//}
-	
-	// convert to decimal price
-	//$("#itemPrice").val(parseFloat(tmpPrice).toFixed(2));
-	
 	return true;
 }
 
@@ -151,7 +141,7 @@ function onUserSaveComplete(response, status)
 			 		$("#alertSuccess").text("Successfully saved."); 
 			 		$("#alertSuccess").show(); 
 			 		
-			 		$("#divItemsGrid").html(resultSet.data); 
+			 		$("#divUsersGrid").html(resultSet.data); 
 				} else if (resultSet.status.trim() == "error") 
 			 	{ 
 			 		$("#alertError").text(resultSet.data); 
@@ -166,7 +156,7 @@ function onUserSaveComplete(response, status)
 		 		$("#alertError").text("Unknown error while saving.."); 
 		 		$("#alertError").show(); 
 		 } 
-		 		$("#hidItemIDSave").val(""); 
+		 		$("#hidUserIDSave").val(""); 
 		 		$("#formUser")[0].reset(); 
 }
  
@@ -182,7 +172,7 @@ function onUserDeleteComplete(response, status)
 						 $("#alertSuccess").text("Successfully deleted."); 
 		 				 $("#alertSuccess").show(); 
 		 				 
-		 				 $("#divItemsGrid").html(resultSet.data); 
+		 				 $("#divUsersGrid").html(resultSet.data); 
 		 		} else if (resultSet.status.trim() == "error") 
 		 		{ 
 		 				$("#alertError").text(resultSet.data); 

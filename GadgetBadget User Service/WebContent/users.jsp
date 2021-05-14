@@ -38,7 +38,7 @@
 								
 								<br>
 								
-								<div id="divItemsGrid"> 
+								<div id="divUsersGrid"> 
 										<%
 										User userObj = new User();
 										out.print(userObj.readUsers());

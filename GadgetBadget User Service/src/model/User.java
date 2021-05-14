@@ -30,7 +30,7 @@ public class User {
 				return "Error while connecting to users database for inserting.!";
 			}
 			
-			// Create a prepared statement 'itemID', ?,
+			// Create a prepared statement 'userID', ?,
 			String query =  " insert into users(`userID`,`userCode`,`username`,`userPwd`,`userEmail`, `userRole`, `userFname`, `userLname`, `userAddress`, `userBod`, `joinDate` )"+ " values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"; 
 			PreparedStatement preparedStmt = con.prepareStatement(query);
 			
@@ -56,7 +56,7 @@ public class User {
 		}
 		catch(Exception e)
 		{
-			output = "{\"status\":\"error\", \"data\": \"Error while inserting the item.\"}";
+			output = "{\"status\":\"error\", \"data\": \"Error while inserting the User.\"}";
 			System.err.println(e.getMessage());
 		}
 		
@@ -113,7 +113,7 @@ public class User {
 				
 				
 				// Add a row into the html table
-				output += "<tr><td><input id='hidItemIDUpdate' type='hidden' value='" + userID + "'>" + userCode + "</td>";
+				output += "<tr><td><input id='hidUserIDUpdate' type='hidden' value='" + userID + "'>" + userCode + "</td>";
 				output += "<td>" + username + "</td>";
 				output += "<td>" + userPwd + "</td>";
 				output += "<td>" + userEmail + "</td>";
@@ -126,9 +126,9 @@ public class User {
 				
 				// Buttons
 				output += "<td><input name='btnUpdate' type='button' value='Update' "
-						+ "class='btnUpdate btn btn-secondary' data-itemid='" + userID + "'></td>"
+						+ "class='btnUpdate btn btn-secondary' data-userid='" + userID + "'></td>"
 						+ "<td><input name='btnRemove' type='button' value='Remove' "
-						+ "class='btnRemove btn btn-danger' data-itemid='" + userID + "'></td></tr>";
+						+ "class='btnRemove btn btn-danger' data-userid='" + userID + "'></td></tr>";
 			}
 			
 			con.close();
@@ -187,7 +187,7 @@ public class User {
 		}
 		catch (Exception e)
 		{
-			output = "{\"status\":\"error\", \"data\": \"Error while Updating the item.\"}";
+			output = "{\"status\":\"error\", \"data\": \"Error while Updating the User.\"}";
 			System.err.println(e.getMessage());
 		}
 		
@@ -225,7 +225,7 @@ public class User {
 		}
 		catch (Exception e)
 		{
-			output = "{\"status\":\"error\", \"data\": \"Error while Deleting the item.\"}";
+			output = "{\"status\":\"error\", \"data\": \"Error while Deleting the User.\"}";
 			System.err.println(e.getMessage());
 		}
 	
