@@ -20,7 +20,7 @@
 								<h1>Users Management</h1>
 								<form id="formUser" name="formUser" method="post" action="users.jsp">
 									User code: <input name="userCode" id="userCode" type="text" class="form-control form-control-sm"><br>
-									User Name: <input name="username" id="username" type="text" class="form-control form-control-sm"><br>
+									UserName: <input name="username" id="username" type="text" class="form-control form-control-sm"><br>
 									Password: <input name="userPwd" id="userPwd" type="password" class="form-control form-control-sm"><br>
 									User Email: <input name="userEmail" id="userEmail" type="email" class="form-control form-control-sm"><br>
 									User Role : <input name="userRole" id="userRole" type="text" class="form-control form-control-sm"><br>

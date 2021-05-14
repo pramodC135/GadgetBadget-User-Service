@@ -76,25 +76,55 @@ function validateUserForm()
 	// CODE
 	if ($("#userCode").val().trim() == "")
 	{
-		return "Insert Item Code.";
+		return "Insert User Code.";
 	}
 	
-	// Name
+	// userName
 	if ($("#username").val().trim() == "")
 	{
-		return "Insert Item Name.";
+		return "Insert UserName.";
 	}
 	
-	// Price
+	// Password
 	if ($("#userPwd").val().trim() == "")
 	{
-		return "Insert Item Price.";
+		return "Insert User Password.";
 	}
 	
-	// Description
+	// Email
 	if ($("#userEmail").val().trim() == "")
 	{
-		return "Insert Item Description.";
+		return "Insert Email.";
+	}
+	
+	// Role
+	if ($("#userRole").val().trim() == "")
+	{
+		return "Insert User Role.";
+	}
+	
+	// First name
+	if ($("#userFname").val().trim() == "")
+	{
+		return "Insert User First Name.";
+	}
+	
+	// Last Name
+	if ($("#userLname").val().trim() == "")
+	{
+		return "Insert User Last Name.";
+	}
+	
+	// Address
+	if ($("#userAddress").val().trim() == "")
+	{
+		return "Insert Address.";
+	}
+	
+	// Birthday
+	if ($("#userBod").val().trim() == "")
+	{
+		return "Insert User Birthday.";
 	}
 	
 	// is numerical value
