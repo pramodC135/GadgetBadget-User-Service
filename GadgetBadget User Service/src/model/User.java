@@ -220,11 +220,12 @@ public class User {
 			preparedStmt.execute();
 			con.close();
 			
-			output = " User Deleted Successfully";	
+			String newUsers =readUsers();
+			output = "{\"status\":\"success\", \"data\":\"" + newUsers + "\"}";
 		}
 		catch (Exception e)
 		{
-			output = "Error while deleting the user.";
+			output = "{\"status\":\"error\", \"data\": \"Error while Deleting the item.\"}";
 			System.err.println(e.getMessage());
 		}
 	
