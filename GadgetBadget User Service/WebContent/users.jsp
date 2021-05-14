@@ -18,7 +18,7 @@
 							<div class="col">
 								
 								<h1>Users Management</h1>
-								<form id="formItem" name="formItem" method="post" action="users.jsp">
+								<form id="formUser" name="formUser" method="post" action="users.jsp">
 									User code: <input name="userCode" id="userCode" type="text" class="form-control form-control-sm"><br>
 									User Name: <input name="username" id="username" type="text" class="form-control form-control-sm"><br>
 									Password: <input name="userPwd" id="userPwd" type="password" class="form-control form-control-sm"><br>
