@@ -15,9 +15,10 @@
 
 	<div class="container">
 					<div class="row">
+					<h1>GADGETBADGET</h1>
 							<div class="col">
 								
-								<h1>Users Management</h1>
+								<h2>Users Management</h2>
 								<form id="formUser" name="formUser" method="post" action="users.jsp">
 									User code: <input name="userCode" id="userCode" type="text" class="form-control form-control-sm"><br>
 									UserName: <input name="username" id="username" type="text" class="form-control form-control-sm"><br>
