@@ -113,7 +113,7 @@ public class User {
 				
 				
 				// Add a row into the html table
-				output += "<tr><td>" + userCode + "</td>";
+				output += "<tr><td><input id='hidItemIDUpdate' type='hidden' value='" + userID + "'>" + userCode + "</td>";
 				output += "<td>" + username + "</td>";
 				output += "<td>" + userPwd + "</td>";
 				output += "<td>" + userEmail + "</td>";
@@ -125,11 +125,10 @@ public class User {
 				output += "<td>" + joinDate + "</td>";
 				
 				// Buttons
-				output += "<td><input name='btnUpdate' type='button' value='Update' class='btn btn-secondary'></td>"
-								 + "<td><form method='post' action='items.jsp'>"
-								 + "<input name='btnRemove' type='submit' value='Remove' class='btn btn-danger'>"
-								 + "<input name='itemID' type='hidden' value='" + userID
-								 + "'>" + "</form></td></tr>"; 
+				output += "<td><input name='btnUpdate' type='button' value='Update' "
+						+ "class='btnUpdate btn btn-secondary' data-itemid='" + userID + "'></td>"
+						+ "<td><input name='btnRemove' type='button' value='Remove' "
+						+ "class='btnRemove btn btn-danger' data-itemid='" + userID + "'></td></tr>";
 			}
 			
 			con.close();
@@ -182,12 +181,13 @@ public class User {
 			preparedStmt.execute();
 			con.close();
 			
-			output = " User Updated successfully ";
+			String newUsers = readUsers();
+			output = "{\"status\":\"success\", \"data\":\"" + newUsers + "\"}";
 			
 		}
 		catch (Exception e)
 		{
-			output = "Error while updating the User.";
+			output = "{\"status\":\"error\", \"data\": \"Error while Updating the item.\"}";
 			System.err.println(e.getMessage());
 		}
 		
@@ -203,6 +203,7 @@ public class User {
 		{
 			DB_Connection obj_DB_Connection= new DB_Connection();
 			Connection con = obj_DB_Connection.connect();
+			
 			if(con == null) {
 				return"Error while connecting to users databae for deleting.";
 			}
