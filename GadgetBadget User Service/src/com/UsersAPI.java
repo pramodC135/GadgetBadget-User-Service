@@ -65,13 +65,13 @@ public class UsersAPI extends HttpServlet {
 		String output = userObj.updateUser(paras.get("hidUserIDSave").toString(), 
 							paras.get("userCode").toString(), 
 							paras.get("username").toString(), 
-							paras.get("itemPrice").toString(), 
-							paras.get("itemDesc").toString(),
-							paras.get("itemDesc").toString(),
-							paras.get("itemDesc").toString(),
-							paras.get("itemDesc").toString(),
-							paras.get("itemDesc").toString(),
-							paras.get("itemDesc").toString()); 
+							paras.get("userPwd").toString(), 
+							paras.get("userEmail").toString(),
+							paras.get("userRole").toString(),
+							paras.get("userFname").toString(),
+							paras.get("userLname").toString(),
+							paras.get("userAddress").toString(),
+							paras.get("userBod").toString()); 
 		
 		response.getWriter().write(output); 
 	}
@@ -87,6 +87,7 @@ public class UsersAPI extends HttpServlet {
 		
 		response.getWriter().write(output); 
 	}
+	
 	private static Map getParasMap(HttpServletRequest request) 
 	{ 
 		 Map<String, String> map = new HashMap<String, String>(); 
